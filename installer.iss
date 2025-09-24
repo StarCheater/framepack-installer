@@ -7,7 +7,7 @@ AppPublisher=FramePack Team
 AppPublisherURL=https://github.com/framepack
 AppSupportURL=https://github.com/framepack/studio/issues
 AppUpdatesURL=https://github.com/framepack/studio/releases
-DefaultDirName={autopf}\FramePack Studio
+DefaultDirName={userappdata}\FramePack Studio
 DefaultGroupName=FramePack Studio
 AllowNoIcons=yes
 LicenseFile=LICENSE.txt
@@ -18,9 +18,10 @@ OutputBaseFilename=FramePackStudio-Setup-{#SetupSetting("AppVersion")}
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
-ArchitecturesAllowed=x64
-ArchitecturesInstallIn64BitMode=x64
+ArchitecturesAllowed=x64compatible
+ArchitecturesInstallIn64BitMode=x64compatible
 MinVersion=6.1sp1
+PrivilegesRequired=none
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"
@@ -28,7 +29,7 @@ Name: "french"; MessagesFile: "compiler:Languages\French.isl"
 Name: "german"; MessagesFile: "compiler:Languages\German.isl"
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
-Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 6.1
+Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 Name: "associate"; Description: "Associate .fpk files with FramePack Studio"; GroupDescription: "File associations:"
 [Files]
 Source: "build\FramePackStudio.exe"; DestDir: "{app}"; Flags: ignoreversion
